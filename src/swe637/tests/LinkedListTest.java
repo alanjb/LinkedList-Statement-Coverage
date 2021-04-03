@@ -180,9 +180,10 @@ public class LinkedListTest {
         l2.add("test2");
         l2.add("test3");
         l2.add("test4");
-        LinkedList.Entry<String> e = l2.entry(2);
+        l2.add("test5");
+        LinkedList.Entry<String> e = l2.entry(1);
 
-        assertEquals("test4", e.toString());
+        assertEquals("test", e.toString()); //should return test
     }
 
     @Test
@@ -192,8 +193,9 @@ public class LinkedListTest {
         l2.add("test2");
         l2.add("test3");
         l2.add("test4");
-        LinkedList.Entry<String> e = l2.entry(2);
+        l2.add("test5");
+        LinkedList.Entry<String> e = l2.entry(3);
 
-        assertEquals("test", e.toString());
+        assertEquals("test4", e.toString()); //should return test4
     }
 }
